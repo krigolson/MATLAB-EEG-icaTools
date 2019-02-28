@@ -1,4 +1,4 @@
-function doPlotICAComponents(inputData,componentsToPlot);
+function doICAPlotComponents(inputData,componentsToPlot);
 
     % simple function to plot ICA components
     % by Olave Krigolson

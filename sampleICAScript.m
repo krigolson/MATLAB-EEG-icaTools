@@ -18,11 +18,11 @@ load('sampleEEGDataPostICA.mat');
 
 preICASampleData = icaEEG.data(35,1001:2000);
 
-doPlotICAComponents(icaEEG,25);
-doPlotICAComponentLoadings(icaEEG,16,[1001 2000]);
+doICAPlotComponents(icaEEG,25);
+doICAPlotComponentLoadings(icaEEG,16,[1001 2000]);
 
 componentsToRemove = [1];
-[icaEEG] = doRemoveICAComponents(icaEEG,componentsToRemove);
+[icaEEG] = doICARemoveComponents(icaEEG,componentsToRemove);
 
 % plot the pre ICA data on channel 35 and compare it with post ICA data on
 % channel 35

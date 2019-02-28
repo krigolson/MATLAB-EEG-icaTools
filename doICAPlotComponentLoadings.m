@@ -1,4 +1,4 @@
-function doPlotICAComponentLoadings(inputData,componentsToPlot,timeToPlot)
+function doICAPlotComponentLoadings(inputData,componentsToPlot,timeToPlot)
 
     % simple function to plot ICA component loadings
     % by Olave Krigolson

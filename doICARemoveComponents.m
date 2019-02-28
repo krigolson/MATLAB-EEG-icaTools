@@ -1,4 +1,4 @@
-function [EEG] = doRemoveICAComponents(EEG,componentsToRemove)
+function [EEG] = doICARemoveComponents(EEG,componentsToRemove)
 
     % simple function to remove ICA components
     % by Olav Krigolson
@@ -17,6 +17,7 @@ function [EEG] = doRemoveICAComponents(EEG,componentsToRemove)
     end
     
     EEG.icaact(componentsToRemove,:) = 0;           % suppress artifacts
-    EEG.data = EEG.icawinv*EEG.icaact;                     % reconstruct data
+    EEG.data = EEG.icawinv*EEG.icaact;              % reconstruct data
+    EEG.icaComponentsRemoved = componentsToRemove;
     
 end
