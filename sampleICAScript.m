@@ -2,6 +2,16 @@ clear all;
 close all;
 clc;
 
+% by Olav Krigolson
+
+% if you want to run the ICA itself uncomment the lines below and do not
+% load the ICA processed data. Or, in the interest of speed you can just
+% load the ICA processed data. Note, this is raw data with no pre
+% processing. See samplePreprocessingScriptWithICA for a full analysis.
+
+%load('sampleEEGData.mat');
+%[icaEEG] = doICA(EEG,0);
+
 % load a test set of data where an extended ICA has already been run on the
 % continuous data
 load('sampleEEGDataPostICA.mat');
