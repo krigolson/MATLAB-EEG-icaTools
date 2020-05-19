@@ -60,12 +60,10 @@ function [EEG] = doInverseICA(EEG)
     txt2.BackgroundColor = 'w';
     txt6 = uicontrol('Style','text','Position',[Left+1*LeftSpace Up 110 20],'String','Select Components','HorizontalAlignment','left');
     txt6.BackgroundColor = 'w';
-    txt7 = uicontrol('Style','text','Position',[Left+4*LeftSpace Up 400 20],'String','Use left and right arrow keys to scroll','HorizontalAlignment','left');
+    txt7 = uicontrol('Style','text','Position',[Left+3*LeftSpace Up 200 20],'String','Use left and right arrow keys to scroll','HorizontalAlignment','left');
     txt7.BackgroundColor = 'w';
-    txt8 = uicontrol('Style','text','Position',[Left+4*LeftSpace Up-UpSpace 400 20],'String','Use up and down arrow keys to change vertical scale','HorizontalAlignment','left');
+    txt8 = uicontrol('Style','text','Position',[Left+3*LeftSpace Up 200 20],'String','Use up and down arrow keys to change scale','HorizontalAlignment','left');
     txt8.BackgroundColor = 'w';
-    txt9 = uicontrol('Style','text','Position',[Left+4*LeftSpace Up-2*UpSpace 400 20],'String','Use s to change horizontal scale','HorizontalAlignment','left');
-    txt9.BackgroundColor = 'w';
     
     [EEG] = redoMath(EEG);
     [EEG] = plotComponentLoadings(EEG);
