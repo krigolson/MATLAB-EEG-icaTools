@@ -1,10 +1,12 @@
-function [EEG] = doICA(EEG,computeActivations)
+function [EEG] = doICA(EEG)
+
+    computeActivations = 1;
 
     % the only required input is an EEG lab data structure. Again, this is
     % an EEGLAB shell. However, we do add the reconstruction of the ica
     % activations
  
-    EEG = pop_runica(EEG,'runica',1);
+    EEG = pop_runica(EEG,'runica');
  
     % compute activations (they are not computed automatically) - this 
     %W = weight*sphere;    % EEGLAB --> W unmixing matrix
