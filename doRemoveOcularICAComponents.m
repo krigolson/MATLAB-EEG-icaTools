@@ -19,4 +19,9 @@ function EEG = doRemoveOcularICAComponents(EEG)
     EEG.numOcular = sum(eyeI);
     disp(['removing ' num2str(EEG.numOcular) ' ocular components']);
 
+    % assign data quality values
+    EEG.quality.ica.numberOfOcular = EEG.numOcular;
+    EEG.quality.ica.icaClassifications = EEG.etc.ic_classification.ICLabel.classifications;
+    EEG.quality.ica.averageBrain = mean(EEG.quality.ica.icaClassifications(:,1));
+
 end
